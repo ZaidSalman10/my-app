@@ -3,13 +3,13 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Routes
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link,
+//   Routes
+// } from "react-router-dom";
 
 
 function App() {
@@ -40,15 +40,10 @@ function App() {
 
   return (
     <>
-    <Router>
     <Navbar title="TextUtils" mode={theme} toggleMode={toggleMode}/>
     <div data-bs-theme={theme}>
-      <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/" element={<TextForm heading="Enter your text" alert={alert} />} />
-      </Routes>
+      <TextForm heading="Enter your text" alert={alert} />
     </div>
-    </Router>
     </>
   );
 }
